@@ -1,0 +1,148 @@
+* { 
+	box-sizing: border-box; 
+}
+
+body {
+	background-image: url(../img/background-contact.jpg);  
+	background-size: cover;
+	color: fff;
+}
+
+.container {
+	width:80%;
+	margin: auto;
+	margin-top:50px;	
+}
+
+.title {
+	font-size: 2em;
+	color: #fff;
+}
+
+.top_panel {
+	margin-top: 150px;
+	margin-bottom: 50px;
+}
+
+.left_panel {
+	float:left;
+	width: 55%;
+	padding: 20px;
+}
+
+.right_panel {
+	float: left;
+	width: 350px;
+	border: 3px solid #FD8D3D;
+}
+
+.nav {
+	width:100%;
+	height: 100px;
+	background-color: #FD8D3D;
+	position: fixed;
+	top: 0px;
+	text-align: center;
+	color: #fff;
+	font-size: 1.5em;
+	padding-top: 36px;
+}
+
+/* Typography */
+
+.top_panel {
+	font-family: 'Lobster', cursive;
+	color: #FD8D3D;
+	font-size: 5em;
+	text-shadow: 2px 2px 5px #000;
+}
+
+.left_panel {
+	color: #fff;
+	font-size: 1.2em;
+	margin-top: 0px;
+	padding-top: 5px;
+	top: 0px;
+	line-height: 30px;
+	font-weight: 600;
+	background-color: rgba(0,0,0,0.5);
+	margin-right: 40px;
+	margin-left: 20px;
+}
+
+.left_panel h1 {
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 5px #000;
+	font-size: 1.6em;
+	color: #fff;
+}
+
+.nav a {
+	color: #fff;
+	font-size: 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
+	transition: color 300ms; 
+	background-color: #F06C0F;
+	margin-right: 20px;
+	padding: 10px;
+}
+
+.nav li {
+    display: inline;
+    background-color: #FD9348;
+}
+
+.nav ul {
+	color: 0000;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav a:hover {
+   color: #ff0;
+   text-decoration: none;
+}
+
+.bottom_panel {
+	padding: 20px;	
+}
+
+.bottom_panel h1 {
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 5px #000;
+	font-size: 1.6em;
+}
+
+.bottom_panel p {
+	font-size: 1.8em;
+}
+
+.middle_panel {
+	width: 180px;
+	height: 404px;
+	float: left;
+	background-color: #FD9348;
+	padding: 0px 20px;
+	margin-right: 40px;
+}
+
+.middle_panel h1 {
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 5px #000;
+	font-size: 1.6em;
+	color: #fff;
+}
+
+.left_panel img {
+	padding-right: 10px;
+	padding-bottom: 80px;
+	margin-top: 8px;
+}
+

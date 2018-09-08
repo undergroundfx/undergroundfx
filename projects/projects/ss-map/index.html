@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr30Sc6HJQ3Y58rDqpb9fKJOEXcGENNp4"></script>
+	<script src="js/custom-map.js"></script>    
+	<link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+	<input type="button" value="Show My Location" id="text1">
+	<select name="QuickFind" id="quickfind" title="QuickFind" onchange="getValue()" value="sadfsadfaf">
+		<option value="#" title="QuickFind">Find A Location</option>
+        <option value="abr" title="ABR -Automotive Collision Repair">ABR - Auto Body Collision Repair</option>            
+        <option value="amt" title="AMT -Aviation Maintenance">AMT - Aviation Maintenance</option>         
+        <option value="auto" title="AUT - Automotive Technology">AUT - Automotive Technology</option>   
+        <option value="avt" title="AVT - Classrooms / Composite Lab">AVT - Classrooms / Composite Lab</option>           
+        <option value="brockey" title="Brockey Conference Center">Brockey Conference Center</option>   
+        <option value="culinary" title="CAB -Culinary Arts">CAB -Culinary Arts</option>         
+        <option value="cas" title="CAS - Cascade Court">CAS - Cascade Court</option>                            
+        <option value="preschool" title="CCC - Preschool & Child Care Center">CCC - Preschool & Child Care Center</option>          
+    	<option value="hdd" title="HDM - Heavy Duty Diesel">HDM - Heavy Duty Diesel</option>        
+        <option value="library" title="LIB -Library">LIB - Library</option>  
+		<option value="north" title="North Parking Lot">North Parking Lot</option>        
+        <option value="wine" title="NWWA - Northwest Wine Academy">NWWA - Northwest Wine Academy</option>          
+        <option value="olympic" title="OLY - Olympic Hall">OLY - Olympic Hall</option> 
+        <option value="pastry" title="PBA - Pastry">PBA - Pastry Lab</option>           
+        <option value="rainier" title="RAH - Rainier Hall">RAH - Rainier Hall</option>          
+        <option value="advisors" title="RSB - Advising / Running Start">RSB - Advising / Running Start</option>                   
+		<option value="pio" title="Communications Office">RSB - Communications Office</option>           
+    	<option value="faculty" title="RSB -Faculty Offices">RSB -Faculty Offices</option>        	        
+		<option value="south" title="South Parking Lot">South Parking Lot</option>
+        <option value="tec" title="Technology Center">Technology Center</option>        
+        <option value="tennis" title="Tennis and Basketball Courts">Tennis & Basketball Courts</option>
+        <option value="uni" title="UNI - University Center">UNI - University Center</option>
+        <option value="weld" title="WWB - Welding / CIE">WWB - Welding / CIE</option>        
+ 
+	</select>
+	<div id="box">Click on a<img src="images/marker.png" class="marker">red pointer to get directions and more information</div>
+	<div id="map-canvas" style="background-color: #BEDCED;"></div>
+    <div id="footer"><i class="fa fa-exclamation-triangle"></i> See Emergency Phones<span id="spacer">|</span><a href="tel:2069340911"><i class="fa fa-phone-square"></i> Call Security</div>
+</body>
+</html>

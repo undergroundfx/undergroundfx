@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+  <head>
+    <title>Mario Mitchell - Web Developer</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" user-scalable="no">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <style>
+        
+        body {
+  padding-top: 20px;  
+}
+
+#scr, #multiply {
+  padding-top: 10px;
+}
+
+.button {
+	width: 80px;
+	height: 40px;
+	background-color: #0000FF;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	padding-top: 5px;
+	float:left;
+	margin: 6px;
+	box-shadow: 4px 4px 6px #000;
+	font-size: 22px;
+	font-family: arial;
+	border-radius: 10px;	
+}
+
+.button:hover {
+  background-color: #B22222; 
+	cursor: pointer;
+}
+
+.clear {
+  background-color: #B22222;	
+	width: 80px;
+	height: 40px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	padding-top: 5px;
+	float:left;
+	margin: 6px;
+	box-shadow: 4px 4px 6px #000;
+	font-size: 22px;
+	font-family: arial;
+	border-radius: 10px;
+}
+
+.clear:hover {
+  background-color: #808080;	
+	width: 80px;
+	height: 40px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	padding-top: 20px;
+	float:left;
+	margin: 6px;
+	box-shadow: 4px 4px 6px #000;
+	font-size: 22px;
+	font-family: arial;  
+	cursor: pointer;
+  padding-top: 5px;
+}
+
+.screen {
+  background-color: yellow;	
+	width: 255px;
+	height: 40px;
+	color: #000;
+	margin: auto;
+	text-align: right;
+	padding-top: 7px;
+	float:left;
+	margin: 6px;
+	box-shadow: 4px 4px 6px #000;
+	font-size: 22px;
+	font-family: arial;
+	padding-right: 10px;
+  overflow: hidden;
+}
+
+#calculator {
+	background-color: green;
+	width: 380px;
+	margin: auto;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+	box-shadow: 4px 4px 0px #000, 0px 8px 15px rgba(0, 0, 0, 0.2);		
+}
+
+#equal {
+  background-color: #0099CC;	
+}
+
+#equal:hover {
+  background-color: #808080;	
+}
+
+#dot {
+  padding-top: 0px;
+}    
+    </style>
+</head>
+<div id="calculator">
+		<div class="clear" id="clear">C</div>
+		<div class="screen" id="scr">0</div>
+		<br clear="all">
+		<div class="button" id="7">7</div>
+		<div class="button" id="8">8</div>
+		<div class="button" id="9">9</div>
+		<div class="button" id="add">+</div>
+		<br clear="all">
+		<div class="button" id="4">4</div>
+		<div class="button" id="5">5</div>
+		<div class="button" id="6">6</div>
+		<div class="button" id="minus">-</div>
+		<br clear="all">
+		<div class="button" id="1">1</div>
+		<div class="button" id="2">2</div>
+		<div class="button" id="3">3</div>
+		<div class="button" id="divide">/</div>
+		<br clear="all">
+		<div class="button" id="0">0</div>
+		<div class="button" id="dot">.</div>
+		<div class="button" id="equal">=</div>
+		<div class="button" id="multiply">*</div>
+		<br clear="all">		
+    </div>
+    <script>
+        var calc = '';
+var scr = $('#scr');
+
+function addtocalc(num) {	
+	calc += num;
+	scr.html(calc);
+}
+
+function onlyonce(symbol) {
+	if (calc.indexOf(symbol) < 0) {
+		addtocalc(symbol);
+	}  	
+}
+
+function notfirst(symbol) {
+	if (calc !== '') {
+		addtocalc(symbol);
+	}	
+}
+
+$('#9').click(function() {
+	addtocalc('9');
+});
+
+$('#8').click(function() {
+	addtocalc('8');
+});
+
+$('#7').click(function() {
+	addtocalc('7');
+});
+
+$('#6').click(function() {
+	addtocalc('6');
+});
+
+$('#5').click(function() {
+	addtocalc('5');
+});
+
+$('#4').click(function() {
+	addtocalc('4');
+});
+
+$('#3').click(function() {
+	addtocalc('3');
+});
+
+$('#2').click(function() {
+	addtocalc('2');
+});
+
+$('#1').click(function() {
+	addtocalc('1');
+});
+
+$('#0').click(function() {
+  notfirst('0');
+});
+
+$('#add').click(function() {
+  notfirst('+');
+});
+
+$('#minus').click(function() {
+	addtocalc('-');
+});
+
+$('#divide').click(function() {
+	notfirst('/');
+});
+
+$('#multiply').click(function() {
+	notfirst('*');
+});
+
+$('#equal').click(function() {
+  if(calc.length > 0) {	
+		calc = eval(calc);
+		scr.html(calc);
+	}
+});
+
+$('#dot').click(function() {
+	onlyonce('.');
+});
+
+$('#clear').click(function() {
+	scr.html('');
+	calc = '';
+	scr.html('0');
+});
+    </script>
+</body>
+</html>
