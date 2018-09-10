@@ -44,8 +44,9 @@ nav {
 	width:250px;
 }
 
-mypic {
+.mypic {
 	float: left;
+	margin: 4px 10px 0px 0px;
 }
 
 /* navigation */
@@ -273,7 +274,7 @@ mypic {
 
 .about-middle_panel {
 	width: 180px;
-	height: 380px;
+	height: 335px;
 	float: left;
 	background-color: #FD9348;
 	padding: 0px 20px;
@@ -748,3 +749,11 @@ tr:nth-child(odd)  {
 		font-size: 1.1em;
 	}
 }	
+
+a img {
+	border: 2px solid orange;
+}
+
+.proj {
+	font-size: 18px;
+}

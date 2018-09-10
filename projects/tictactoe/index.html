@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" user-scalable="no">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <style>
+        h1 {
+  text-align: center;
+  margin: auto;
+  font-family: verdana;
+  font-size: 40px;
+  padding: 20px;
+  text-shadow: 1px 1px 2px red
+  
+}
+
+.button {
+  width: 80px;
+  height: 40px;
+  background-color: #0000FF;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  margin: 10px;
+  box-shadow: 4px 4px 0px #000;
+  font-size: 42px;
+  font-family: arial;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+#calculator {
+  background-color: red;
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0px #000, 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="calculator">
+            <br clear="all">
+            <div class="button" id="1"></div>
+            <div class="button" id="2"></div>
+            <div class="button" id="3"></div>
+            <br clear="all">
+            <div class="button" id="4"></div>
+            <div class="button" id="5"></div>
+            <div class="button" id="6"></div>
+            <br clear="all">
+            <div class="button" id="7"></div>
+            <div class="button" id="8"></div>
+            <div class="button" id="9"></div>
+            <br clear="all">		
+    </div>
+
+    <script>
+        var turn = 'x';
+var winner = $('h1');
+
+function addtogame(location) {
+  // don't add if box is taken
+  here = $(location).html();
+  if (here.length > 0) {
+    return;
+  }
+  // check if x or o was placed last
+  if (turn === 'x') {
+    $(location).html('X');
+    turn = 'o';
+  } else {
+    $(location).html('O');
+    turn = 'x';
+  }
+  checkwinner();
+}
+// check all possible win situations
+function checkwinner() {
+  var one = $('#1').html();
+  var two = $('#2').html();
+  var three = $('#3').html();
+  var four = $('#4').html();
+  var five = $('#5').html();
+  var six = $('#6').html();
+  var seven = $('#7').html();
+  var eight = $('#8').html();
+  var nine = $('#9').html();
+
+  if (one === 'X' && two === 'X' && three === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (one === 'O' && two === 'O' && three === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);
+  } else if (one === 'X' && four === 'X' && seven === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (one === 'O' && four === 'O' && seven === 'O') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (one === 'X' && five === 'X' && nine === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (one === 'O' && five === 'O' && nine === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);
+  } else if (two === 'X' && five === 'X' && eight === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (two === 'O' && five === 'O' && eight === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);
+  } else if (three === 'X' && five === 'X' && seven === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (three === 'O' && five === 'O' && seven === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);
+  } else if (three === 'X' && six === 'X' && nine === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (three === 'O' && six === 'O' && nine === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);
+  } else if (four === 'X' && five === 'X' && six === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (four === 'O' && five === 'O' && six === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);
+  } else if (seven === 'X' && eight === 'X' && nine === 'X') {
+    winner.html('X Won!');
+    setTimeout(resetgame, 2000);
+  } else if (seven === 'O' && eight === 'O' && nine === 'O') {
+    winner.html('O Won!');
+    setTimeout(resetgame, 2000);    
+  // if no wins game is a tie
+  } else if (one.length > 0 && two.length > 0 && three.length > 0 && four.length > 0 && five.length > 0 && six.length > 0 && seven.length > 0 && eight.length > 0 && nine.length > 0) {
+    winner.html('It was a tie!');
+    setTimeout(resetgame, 2000);
+  }
+  
+    function resetgame() {
+      $('.button').html('');
+      winner.html('Tic-Tac-Toe');
+    }      
+}
+
+  
+
+$('#9').click(function() {
+  addtogame('#9');
+});
+
+$('#8').click(function() {
+  addtogame('#8');
+});
+
+$('#7').click(function() {
+  addtogame('#7');
+});
+
+$('#6').click(function() {
+  addtogame('#6');
+});
+
+$('#5').click(function() {
+  addtogame('#5');
+});
+
+$('#4').click(function() {
+  addtogame('#4');
+});
+
+$('#3').click(function() {
+  addtogame('#3');
+});
+
+$('#2').click(function() {
+  addtogame('#2');
+});
+
+$('#1').click(function() {
+  addtogame('#1');
+});
+    </script>
+
+</body>
